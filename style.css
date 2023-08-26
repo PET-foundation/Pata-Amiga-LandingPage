@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+/*Font: Bungee*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+header {
+    background-color: #0CBFDE;
+    text-align: center;
+    padding: 25px;
+    border-radius: 0px 0px 20px 20px;
+    border-bottom: 3px solid rgb(0, 0, 0);
+}
+
+section#presentation {
+    height: 450px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: 'Bungee';
+}
+
+section#presentation > div > #paLogo{
+    width: 10%;
+    padding-top: 50px;
+}
+
+input {
+    margin-top: 20px;
+    font-family: 'Bungee';
+    font-size: 10pt;
+    border: 2px solid black;
+    box-shadow: 2px 2px 0px 0px black;
+    border-radius: 10px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+input#documentation {
+    background-color: #0CBFDE;
+}
+
+input#webSite {
+    background-color: #FEDD59;
+}
+
+
+div#catchphrase {
+    margin-top: 20px;
+}
+
+section#about{
+    background-color: #FEDD59;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 450px;
+}
+
+section#about{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 450px;
+}
+
+footer {
+    font: normal 15pt arial;
+    background-color: #0CBFDE;
+    text-align: center;
+    padding: 25px;
+    border-radius: 20px 20px 0px 0px;
+    border-top: 3px solid rgb(0, 0, 0);
+}
