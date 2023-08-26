@@ -73,6 +73,46 @@ section#about{
     height: 450px;
 }
 
+#cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 65px;
+}
+
+#card {
+    font-size: 24px;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 300px;
+    text-align: center;
+    font-family: 'Bungee';
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 0px 0px black;
+}
+
+#card > h1 {
+    text-align: center;
+    background-color: #0CBFDE;
+    border-bottom: 3px solid black;
+    font-size: 15pt;
+    padding: 0;
+    border-radius: 8px 8px 0px 0px;
+}
+
+#card > p {
+    text-align: center;
+    background-color: white;
+    font: bold 11pt arial;
+    flex-grow: 1;
+    padding: 20px;
+    border-radius: 0px 0px 8px 8px;
+}
+
 footer {
     font: normal 15pt arial;
     background-color: #0CBFDE;
