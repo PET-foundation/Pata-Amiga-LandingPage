@@ -7,6 +7,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    
 }
 
 html, body {
@@ -14,18 +15,22 @@ html, body {
 }
 
 header {
+    font-family: "Bungee";
     background-color: #0CBFDE;
     text-align: center;
-    padding: 25px;
     border-radius: 0px 0px 20px 20px;
     border-bottom: 3px solid rgb(0, 0, 0);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 3px 3px black;
+    font-size: 45px;
 }
 
 section#presentation {
-    height: 450px;
     text-align: center;
     color: rgb(0, 0, 0);
     font-family: 'Bungee';
+    display: contents;
 }
 
 section#presentation > div > #paLogo{
@@ -45,6 +50,7 @@ input {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    margin: 8px;
 }
 
 input#documentation {
@@ -64,13 +70,12 @@ section#about{
     background-color: #FEDD59;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    height: 450px;
+    height: 900px;
 }
 
-section#about{
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    height: 450px;
+section#about > *{
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 #cards {
@@ -111,6 +116,37 @@ section#about{
     flex-grow: 1;
     padding: 20px;
     border-radius: 0px 0px 8px 8px;
+}
+
+.floatText {
+    font-size: 32px;
+    line-height: 37px;
+    margin: auto;
+    border-radius: 10px;
+    height: 250px;
+    text-align: center;
+    font-family: 'Bungee';
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    color: #0CBFDE;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.floatText#cat1 {
+    background-image: url(images/cat1.png);
+    background-size: 100%;
+}
+
+.floatText#cat2 {
+    background-image: url(images/cat2.png);
+    background-size: 100%;
+    background-position: center;
 }
 
 footer {
