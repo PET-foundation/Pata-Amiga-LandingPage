@@ -16,11 +16,14 @@ html, body {
 }
 
 header {
-    font-family: "Bungee";
     background-color: #0CBFDE;
-    text-align: center;
     border-radius: 0px 0px 20px 20px;
     border-bottom: 4px solid rgb(0, 0, 0);
+}
+
+#logo {
+    font-family: "Bungee";
+    text-align: center;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
     text-shadow: 3px 3px black;
@@ -195,10 +198,59 @@ section#technologies {
 }
 
 footer {
-    font: normal 15pt arial;
+    font-family: 'Bungee';
     background-color: #0CBFDE;
-    text-align: center;
-    padding: 25px;
+    padding: 15px;
     border-radius: 20px 20px 0px 0px;
     border-top: 4px solid rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    list-style-type: none;
+}
+
+.integrante {
+    font: bold 10pt arial;
+    text-align: justify;
+    justify-content: center;
+}
+
+#fDivLeft {
+    line-height: 18px;
+    bottom: 0;
+    right: 0;
+    padding-left: 350px;
+    font-family: "Bungee";
+    font-size: 15pt;
+}
+
+#fDivLeft > span {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+#fDivRight {
+    padding-top: 35px;
+    padding-right: 350px;
+    font-family: "Bungee";
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 3px 3px black;
+    font-size: 20pt;
+    width: auto;
+}
+
+
+a:link {
+    text-decoration: none;
+   }
+   
+a:hover {
+text-decoration: underline;
+}
+
+a:visited { 
+    color: black; 
 }
