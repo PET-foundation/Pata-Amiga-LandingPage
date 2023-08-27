@@ -12,6 +12,7 @@
 
 html, body {
     min-height: 100vh;
+    background-color: rgb(233, 233, 233);
 }
 
 header {
@@ -19,7 +20,7 @@ header {
     background-color: #0CBFDE;
     text-align: center;
     border-radius: 0px 0px 20px 20px;
-    border-bottom: 3px solid rgb(0, 0, 0);
+    border-bottom: 4px solid rgb(0, 0, 0);
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
     text-shadow: 3px 3px black;
@@ -61,11 +62,6 @@ input#webSite {
     background-color: #FEDD59;
 }
 
-
-div#catchphrase {
-    margin-top: 20px;
-}
-
 section#about{
     background-color: #FEDD59;
     border-top: 1px solid black;
@@ -98,6 +94,7 @@ section#about > *{
     display: flex;
     flex-direction: column;
     box-shadow: 5px 5px 0px 0px black;
+    height: max-content;
 }
 
 #card > h1 {
@@ -117,6 +114,50 @@ section#about > *{
     padding: 20px;
     border-radius: 0px 0px 8px 8px;
 }
+
+.custom-list {
+    list-style: none;
+    padding-left: 20px;
+    font-size: 12pt;
+    text-align: justify;
+    justify-content: center;
+    margin: auto;
+}
+
+.custom-list li::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.item1::before {
+    background-image: url('images/html-5.png');
+}
+
+.item2::before {
+    background-image: url('images/css-3.png');
+}
+
+.item3::before {
+    background-image: url('images/js.png');
+}
+
+.item4::before {
+    background-image: url('images/atom.png');
+}
+
+.item5::before {
+    background-image: url('images/chakraUi.png');
+}
+
+.item6::before {
+    background-image: url('images/AOS.png');
+    border-radius: 2px;
+}
+
 
 .floatText {
     font-size: 32px;
@@ -149,11 +190,15 @@ section#about > *{
     background-position: center;
 }
 
+section#technologies {
+    height: 450px;
+}
+
 footer {
     font: normal 15pt arial;
     background-color: #0CBFDE;
     text-align: center;
     padding: 25px;
     border-radius: 20px 20px 0px 0px;
-    border-top: 3px solid rgb(0, 0, 0);
+    border-top: 4px solid rgb(0, 0, 0);
 }
