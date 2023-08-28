@@ -5,41 +5,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
 * {
-    margin: 0px;
-    padding: 0px;
-    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html, body {
     min-height: 100vh;
     background-color: rgb(233, 233, 233);
+    margin: auto;
+    min-width: 300px;
+    max-width: 100%;
+}
+
+img {
+    width: 100%;
 }
 
 header {
     background-color: #0CBFDE;
     border-radius: 0px 0px 20px 20px;
     border-bottom: 4px solid rgb(0, 0, 0);
+    padding: 1vh;
 }
 
 #logo {
     font-family: "Bungee";
     text-align: center;
-    -webkit-text-stroke-width: 2px;
+    font-size: 5vw; /* Ajuste o tamanho da fonte para telas pequenas */
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
-    text-shadow: 3px 3px black;
-    font-size: 45px;
+    text-shadow: 0.5vw 0.5vw black;
+}
+
+.section-header {
+    font-size: 2.5vw; /* Ajuste o tamanho da fonte para telas pequenas */
+    text-shadow: 0.2vw 0.2vw black;
+}
+
+@media (min-width: 768px) {
+    /* Estilos para telas maiores */
+    #logo {
+        font-size: 5vh; /* Ajuste o tamanho da fonte para telas maiores */
+        text-shadow: 0.2vh 0.2vh black;
+    }
+
+    .section-header {
+        font-size: 1.5vh; /* Ajuste o tamanho da fonte para telas maiores */
+        text-shadow: 0.1vh 0.1vh black;
+    }
+}
+
+section {
+    overflow: hidden;
 }
 
 section#presentation {
-    text-align: center;
-    color: rgb(0, 0, 0);
-    font-family: 'Bungee';
-    display: contents;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 section#presentation > div > #paLogo{
-    width: 10%;
-    padding-top: 50px;
+    margin: auto;
+    max-width: 100%;
+    max-height: 150px;
+    padding-top: 5vh;
 }
 
 input {
@@ -51,10 +83,16 @@ input {
     border-radius: 10px;
     color: black;
     padding: 15px 32px;
-    text-align: center;
     text-decoration: none;
-    display: inline-block;
     margin: 8px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row; /* Defina como linha por padrão */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 input#documentation {
@@ -79,10 +117,12 @@ section#about > *{
 
 #cards {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    flex-direction: row;
-    margin-top: 65px;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 0 auto;
+    max-width: 1200px;
+    overflow: hidden;
 }
 
 #card {
@@ -98,6 +138,7 @@ section#about > *{
     flex-direction: column;
     box-shadow: 5px 5px 0px 0px black;
     height: max-content;
+    overflow: hidden;
 }
 
 #card > h1 {
@@ -105,7 +146,6 @@ section#about > *{
     background-color: #0CBFDE;
     border-bottom: 3px solid black;
     font-size: 15pt;
-    padding: 0;
     border-radius: 8px 8px 0px 0px;
 }
 
@@ -116,6 +156,7 @@ section#about > *{
     flex-grow: 1;
     padding: 20px;
     border-radius: 0px 0px 8px 8px;
+    height: max-content;
 }
 
 .custom-list {
@@ -163,14 +204,14 @@ section#about > *{
 
 
 .floatText {
-    font-size: 32px;
-    line-height: 37px;
+    font-size: 24px;
+    line-height: 28px;
     margin: auto;
     border-radius: 10px;
-    height: 250px;
     text-align: center;
     font-family: 'Bungee';
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     color: #0CBFDE;
@@ -180,6 +221,8 @@ section#about > *{
     background-attachment: fixed;
     background-position: bottom;
     background-repeat: no-repeat;
+    max-height: 250px;
+    overflow: hidden;
 }
 
 .floatText#cat1 {
@@ -204,7 +247,7 @@ footer {
     border-radius: 20px 20px 0px 0px;
     border-top: 4px solid rgb(0, 0, 0);
     display: flex;
-    justify-content: space-between;
+    overflow: hidden;
 }
 
 li {
@@ -221,9 +264,10 @@ li {
     line-height: 18px;
     bottom: 0;
     right: 0;
-    padding-left: 350px;
+    padding-left: 25%;
     font-family: "Bungee";
     font-size: 15pt;
+    overflow: hidden;
 }
 
 #fDivLeft > span {
@@ -233,13 +277,14 @@ li {
 
 #fDivRight {
     padding-top: 35px;
-    padding-right: 350px;
+    padding-right: 25%;
     font-family: "Bungee";
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
     text-shadow: 3px 3px black;
     font-size: 20pt;
     width: auto;
+    overflow: hidden;
 }
 
 
