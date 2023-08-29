@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
-/* Font: Bungee */
+/*Font: Bungee*/
+
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
 * {
@@ -15,6 +16,10 @@ html, body {
     margin: auto;
     min-width: 300px;
     max-width: 100%;
+}
+
+img {
+    width: 100%;
 }
 
 header {
@@ -52,7 +57,6 @@ header {
 }
 
 
-
 section {
     overflow: hidden;
 }
@@ -72,23 +76,22 @@ section#presentation > div > #paLogo {
 
 @media (max-width: 767px) {
     section#presentation > div > #paLogo {
-        max-height: 42vw; /* Adjust the maximum height for smaller screens */
+        max-height: 42vw;
     }
 }
 
 #slogan {
     font-family: 'Bungee';
     font-style: italic;
-    font-size: 3vw; /* Tamanho de fonte responsivo para telas pequenas */
-    white-space: nowrap; /* Impede que o texto quebre a linha */
-    overflow: hidden; /* Evita que o texto transborde horizontalmente */
-    text-overflow: ellipsis; /* Adiciona reticências quando o texto é cortado */
+    font-size: 3vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 @media (min-width: 768px) {
-    /* Estilos para telas maiores */
     #slogan {
-        font-size: 3vh; /* Tamanho de fonte responsivo para telas maiores */
+        font-size: 3vh;
     }
 }
 
@@ -107,7 +110,7 @@ button {
 
 .button-container {
     display: flex;
-    flex-direction: row; /* Defina como linha por padrão */
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -117,7 +120,7 @@ button#documentation {
     background-color: #0CBFDE;
 }
 
-button#documentation:hover {
+#documentation:hover {
     cursor: pointer;
     background-color: #fedd598c;
   }
@@ -175,7 +178,7 @@ section#about{
 
 @media (max-width: 767px) {
     #card > h1 {
-        font-size: 10pt; /* Ajuste o tamanho do h1 para telas menores */
+        font-size: 10pt;
     }
 }
 
@@ -187,35 +190,33 @@ section#about{
     background-color: white;
 }
 
-/* Media query para telas menores */
 @media (max-width: 767px) {
     #card > p {
-        font-size: 10pt; /* Ajuste o tamanho do texto para telas menores */
-        padding: 15px; /* Ajuste o padding para telas menores, se necessário */
+        font-size: 10pt;
+        padding: 15px;
     }
 }
 
-/* Media query para telas maiores */
 @media (min-width: 768px) {
     #card > p {
-        font-size: 12pt; /* Ajuste o tamanho do texto para telas maiores */
-        padding: 33px; /* Ajuste o padding para telas maiores, se necessário */
+        font-size: 12pt;
+        padding: 33px;
     }
 }
 
 @media (max-width: 767px) {
     #cards {
-        grid-template-columns: 1fr; /* Faz com que os cards se empilhem verticalmente */
-        gap: 10px; /* Reduz o espaçamento entre os cards */
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
 
     .card {
-        margin: 10px 0; /* Ajusta a margem para um espaçamento melhor */
+        margin: 10px 0;
     }
 
     #cat1,
     #cat2 {
-        font-size: 16px; /* Ajusta o tamanho da fonte para telas menores */
+        font-size: 16px;
     }
 }
 
@@ -294,14 +295,14 @@ section#about{
 footer {
     font-family: 'Bungee';
     background-color: #0CBFDE;
-    padding: 1vh 5%; /* Ajuste o espaçamento conforme necessário */
+    padding: 1vh 5%;
     border-radius: 20px 20px 0px 0px;
     border-top: 4px solid rgb(0, 0, 0);
     display: flex;
     overflow: hidden;
-    flex-direction: column; /* Altera para coluna em telas pequenas */
+    flex-direction: column;
     align-items: center;
-    text-align: center; /* Centraliza o texto horizontalmente */
+    text-align: center;
 }
 
 li {
@@ -315,7 +316,7 @@ li {
 }
 
 #fDivBottom {
-    font-size: 1.5vw; /* Ajuste o tamanho da fonte para telas pequenas */
+    font-size: 1.5vw;
     overflow: hidden;
 }
 
@@ -326,18 +327,17 @@ li {
 }
 
 @media (min-width: 768px) {
-    /* Estilos para telas maiores */
     #fDivBottom {
-        font-size: 1vh; /* Ajuste o tamanho da fonte para telas maiores */
+        font-size: 1vh;
     }
     #fDivBottom > span {
-        font-size: 3vh; /* Ajuste o tamanho da fonte do span para telas maiores */
+        font-size: 3vh;
     }
 }
 
 #fDivTop {
     font-family: "Bungee";
-    font-size: 2vw; /* Ajuste o tamanho da fonte para telas pequenas */
+    font-size: 2vw;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
     text-shadow: 0.3vw 0.3vw black;
@@ -346,17 +346,16 @@ li {
 }
 
 @media (max-width: 767px) {
-    /* Estilos para telas menores */
     #fDivTop {
-        font-size: 5.5vw; /* Ajuste o tamanho da fonte para telas ainda menores */
+        font-size: 5.5vw;
     }
 }
 
 #technologies {
     background-color: rgb(233, 233, 233);
     display: flex;
-    align-items: center; /* Centraliza horizontalmente */
-    justify-content: center; /* Centraliza verticalmente */
+    align-items: center;
+    justify-content: center;
     padding: 5vw;
 }
 
@@ -386,9 +385,8 @@ li {
 }
 
 @media (min-width: 768px) {
-    /* Estilos para telas maiores */
     #fDivRight {
-        font-size: 6vh; /* Ajuste o tamanho da fonte para telas maiores */
+        font-size: 6vh;
     }
 }
 
@@ -404,22 +402,15 @@ a:visited {
     color: black; 
 }
 
-.adjustable-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    overflow: hidden; /* Impede que a imagem vaze */
+#adjustable-image {
+    display: block;
+    margin: auto;
+    max-width: 50%;
+    height: auto;
 }
 
-.adjustable-image img {
-    max-width: 100%; /* A imagem terá no máximo a largura do seu contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-}
-
-/* Ajuste para telas pequenas */
 @media (max-width: 767px) {
-    .adjustable-image img {
-        max-width: 90%; /* Ajuste o tamanho da imagem para telas pequenas */
+    #adjustable-image {
+        max-width: 80vw;
     }
 }
