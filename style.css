@@ -424,6 +424,6 @@ a:visited {
 
 @media (min-width: 768px) {
     .adjustable-image {
-        max-width: 35vw;
+        max-width: 30vw;
     }
 }
