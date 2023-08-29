@@ -31,16 +31,12 @@ header {
 
 #logo {
     font-family: "Bungee";
-    text-align: center;
-    font-size: 5vw; /* Ajuste o tamanho da fonte para telas pequenas */
-    -webkit-text-stroke-width: 1px;
+    font-size: 6vw; /* Ajuste o tamanho da fonte para telas pequenas */
+    -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
-    text-shadow: 0.5vw 0.5vw black;
-}
-
-.section-header {
-    font-size: 2.5vw; /* Ajuste o tamanho da fonte para telas pequenas */
-    text-shadow: 0.2vw 0.2vw black;
+    text-shadow: 0.3vw 0.3vw black;
+    overflow: hidden;
+    text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -56,6 +52,12 @@ header {
     }
 }
 
+.section-header {
+    font-size: 2.5vw; /* Ajuste o tamanho da fonte para telas pequenas */
+    text-shadow: 0.2vw 0.2vw black;
+}
+
+
 section {
     overflow: hidden;
 }
@@ -67,11 +69,32 @@ section#presentation {
     justify-content: center;
 }
 
-section#presentation > div > #paLogo{
+section#presentation > div > #paLogo {
     margin: auto;
-    max-width: 100%;
-    max-height: 150px;
+    max-height: 11vw;
     padding-top: 5vh;
+}
+
+@media (max-width: 767px) {
+    section#presentation > div > #paLogo {
+        max-height: 42vw; /* Adjust the maximum height for smaller screens */
+    }
+}
+
+#slogan {
+    font-family: 'Bungee';
+    font-style: italic;
+    font-size: 3vw; /* Tamanho de fonte responsivo para telas pequenas */
+    white-space: nowrap; /* Impede que o texto quebre a linha */
+    overflow: hidden; /* Evita que o texto transborde horizontalmente */
+    text-overflow: ellipsis; /* Adiciona reticências quando o texto é cortado */
+}
+
+@media (min-width: 768px) {
+    /* Estilos para telas maiores */
+    #slogan {
+        font-size: 3vh; /* Tamanho de fonte responsivo para telas maiores */
+    }
 }
 
 input {
@@ -82,7 +105,7 @@ input {
     box-shadow: 2px 2px 0px 0px black;
     border-radius: 10px;
     color: black;
-    padding: 15px 32px;
+    padding: 5px 21px;
     text-decoration: none;
     margin: 8px;
 }
@@ -107,38 +130,34 @@ section#about{
     background-color: #FEDD59;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    height: 900px;
-}
-
-section#about > *{
-    margin-left: 100px;
-    margin-right: 100px;
+    padding: 5vw;
 }
 
 #cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     max-width: 1200px;
+    margin: auto;
+    width: 50vw;
+}
+
+.card {
+    flex-grow: 1;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: 'Bungee';
+    box-shadow: 5px 5px 0px 0px black;
     overflow: hidden;
+    margin: 2vw;
+    flex-direction: column;
 }
 
 #card {
     font-size: 24px;
-    margin: auto;
-    border: 2px solid black;
-    border-radius: 10px;
-    height: 300px;
     text-align: center;
-    font-family: 'Bungee';
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 5px 5px 0px 0px black;
-    height: max-content;
-    overflow: hidden;
+    width: 100%;
+    border-radius: 0px 0px 8px 8px;
 }
 
 #card > h1 {
@@ -149,14 +168,50 @@ section#about > *{
     border-radius: 8px 8px 0px 0px;
 }
 
+@media (max-width: 767px) {
+    #card > h1 {
+        font-size: 10pt; /* Ajuste o tamanho do h1 para telas menores */
+    }
+}
+
 #card > p {
-    text-align: center;
-    background-color: white;
     font: bold 11pt arial;
     flex-grow: 1;
     padding: 20px;
     border-radius: 0px 0px 8px 8px;
-    height: max-content;
+    background-color: white;
+}
+
+/* Media query para telas menores */
+@media (max-width: 767px) {
+    #card > p {
+        font-size: 10pt; /* Ajuste o tamanho do texto para telas menores */
+        padding: 15px; /* Ajuste o padding para telas menores, se necessário */
+    }
+}
+
+/* Media query para telas maiores */
+@media (min-width: 768px) {
+    #card > p {
+        font-size: 12pt; /* Ajuste o tamanho do texto para telas maiores */
+        padding: 33px; /* Ajuste o padding para telas maiores, se necessário */
+    }
+}
+
+@media (max-width: 767px) {
+    #cards {
+        grid-template-columns: 1fr; /* Faz com que os cards se empilhem verticalmente */
+        gap: 10px; /* Reduz o espaçamento entre os cards */
+    }
+
+    .card {
+        margin: 10px 0; /* Ajusta a margem para um espaçamento melhor */
+    }
+
+    #cat1,
+    #cat2 {
+        font-size: 16px; /* Ajusta o tamanho da fonte para telas menores */
+    }
 }
 
 .custom-list {
@@ -202,52 +257,46 @@ section#about > *{
     border-radius: 2px;
 }
 
-
 .floatText {
     font-size: 24px;
-    line-height: 28px;
-    margin: auto;
-    border-radius: 10px;
     text-align: center;
     font-family: 'Bungee';
     width: 100%;
-    max-width: 300px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     color: #0CBFDE;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: bottom;
+    background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
-    max-height: 250px;
     overflow: hidden;
 }
 
-.floatText#cat1 {
-    background-image: url(images/cat1.png);
-    background-size: 100%;
-}
+@media (max-width: 767px) {
+    #cat1 img {
+        max-width: 100%;
+        height: auto;
+    }
 
-.floatText#cat2 {
-    background-image: url(images/cat2.png);
-    background-size: 100%;
-    background-position: center;
-}
-
-section#technologies {
-    height: 450px;
+    #cat2 img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 footer {
     font-family: 'Bungee';
     background-color: #0CBFDE;
-    padding: 15px;
+    padding: 1vh 5%; /* Ajuste o espaçamento conforme necessário */
     border-radius: 20px 20px 0px 0px;
     border-top: 4px solid rgb(0, 0, 0);
     display: flex;
     overflow: hidden;
+    flex-direction: column; /* Altera para coluna em telas pequenas */
+    align-items: center;
+    text-align: center; /* Centraliza o texto horizontalmente */
 }
 
 li {
@@ -260,33 +309,83 @@ li {
     justify-content: center;
 }
 
-#fDivLeft {
-    line-height: 18px;
-    bottom: 0;
-    right: 0;
-    padding-left: 25%;
-    font-family: "Bungee";
-    font-size: 15pt;
+#fDivBottom {
+    font-size: 1.5vw; /* Ajuste o tamanho da fonte para telas pequenas */
     overflow: hidden;
 }
 
-#fDivLeft > span {
-    -webkit-text-stroke-width: 1px;
+#fDivBottom > span {
+    font-size: 4vw;
+    -webkit-text-stroke-width: 1.8px;
     -webkit-text-stroke-color: black;
 }
 
-#fDivRight {
-    padding-top: 35px;
-    padding-right: 25%;
+@media (min-width: 768px) {
+    /* Estilos para telas maiores */
+    #fDivBottom {
+        font-size: 1vh; /* Ajuste o tamanho da fonte para telas maiores */
+    }
+    #fDivBottom > span {
+        font-size: 3vh; /* Ajuste o tamanho da fonte do span para telas maiores */
+    }
+}
+
+#fDivTop {
     font-family: "Bungee";
+    font-size: 2vw; /* Ajuste o tamanho da fonte para telas pequenas */
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
-    text-shadow: 3px 3px black;
-    font-size: 20pt;
-    width: auto;
+    text-shadow: 0.3vw 0.3vw black;
     overflow: hidden;
+    text-align: center;
 }
 
+@media (max-width: 767px) {
+    /* Estilos para telas menores */
+    #fDivTop {
+        font-size: 5.5vw; /* Ajuste o tamanho da fonte para telas ainda menores */
+    }
+}
+
+#technologies {
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    padding: 5vw;
+}
+
+#technologies .card {
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Bungee';
+    box-shadow: 5px 5px 0px 0px black;
+    
+}
+
+#technologies .card > h1 {
+    text-align: center;
+    background-color: #0CBFDE;
+    border-bottom: 3px solid black;
+    font-size: 15pt;
+    border-radius: 8px 8px 0px 0px;
+    padding: 10px;
+}
+
+#technologies .card > ul {
+    text-align: justify;
+    justify-content: center;
+    padding: 10px;
+    padding-left: 30%;
+}
+
+@media (min-width: 768px) {
+    /* Estilos para telas maiores */
+    #fDivRight {
+        font-size: 6vh; /* Ajuste o tamanho da fonte para telas maiores */
+    }
+}
 
 a:link {
     text-decoration: none;
