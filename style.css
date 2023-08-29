@@ -402,15 +402,28 @@ a:visited {
     color: black; 
 }
 
-#adjustable-image {
-    display: block;
-    margin: auto;
+.adjustable-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 50%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.adjustable-image img {
+    width: 100%;
     height: auto;
 }
 
 @media (max-width: 767px) {
-    #adjustable-image {
+    .adjustable-image {
         max-width: 80vw;
+    }
+}
+
+@media (min-width: 768px) {
+    .adjustable-image {
+        max-width: 35vw;
     }
 }
