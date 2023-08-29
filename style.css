@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
-/*Font: Bungee*/
-
+/* Font: Bungee */
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
 * {
@@ -27,7 +26,7 @@ header {
 
 #logo {
     font-family: "Bungee";
-    font-size: 6vw; /* Ajuste o tamanho da fonte para telas pequenas */
+    font-size: 6vw;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
     text-shadow: 0.3vw 0.3vw black;
@@ -36,22 +35,22 @@ header {
 }
 
 @media (min-width: 768px) {
-    /* Estilos para telas maiores */
     #logo {
-        font-size: 5vh; /* Ajuste o tamanho da fonte para telas maiores */
+        font-size: 5vh;
         text-shadow: 0.2vh 0.2vh black;
     }
 
     .section-header {
-        font-size: 1.5vh; /* Ajuste o tamanho da fonte para telas maiores */
+        font-size: 1.5vh;
         text-shadow: 0.1vh 0.1vh black;
     }
 }
 
 .section-header {
-    font-size: 2.5vw; /* Ajuste o tamanho da fonte para telas pequenas */
+    font-size: 2.5vw;
     text-shadow: 0.2vw 0.2vw black;
 }
+
 
 
 section {
@@ -118,7 +117,7 @@ button#documentation {
     background-color: #0CBFDE;
 }
 
-#documentation:hover {
+button#documentation:hover {
     cursor: pointer;
     background-color: #fedd598c;
   }
