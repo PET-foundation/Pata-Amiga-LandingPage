@@ -18,10 +18,6 @@ html, body {
     max-width: 100%;
 }
 
-img {
-    width: 100%;
-}
-
 header {
     background-color: #0CBFDE;
     border-radius: 0px 0px 20px 20px;
@@ -97,7 +93,7 @@ section#presentation > div > #paLogo {
     }
 }
 
-input {
+button {
     margin-top: 20px;
     font-family: 'Bungee';
     font-size: 10pt;
@@ -118,12 +114,22 @@ input {
     flex-wrap: wrap;
 }
 
-input#documentation {
+button#documentation {
     background-color: #0CBFDE;
 }
 
-input#webSite {
+#documentation:hover {
+    cursor: pointer;
+    background-color: #fedd598c;
+  }
+
+button#webSite {
     background-color: #FEDD59;
+}
+
+#webSite:hover {
+    cursor: pointer;
+    background-color: #0cbfde79;
 }
 
 section#about{
@@ -397,4 +403,24 @@ text-decoration: underline;
 
 a:visited { 
     color: black; 
+}
+
+.adjustable-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden; /* Impede que a imagem vaze */
+}
+
+.adjustable-image img {
+    max-width: 100%; /* A imagem terá no máximo a largura do seu contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 767px) {
+    .adjustable-image img {
+        max-width: 90%; /* Ajuste o tamanho da imagem para telas pequenas */
+    }
 }
